@@ -4,6 +4,7 @@ import Footer from './shared/Footer';
 import Navbar from './shared/Navbar';
 import AboutAndEvents from './sections/about-events';
 import Faculties from './sections/faculties';
+import Projects from './sections/projects';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <MainCarousel/>
         <AboutAndEvents/>
         <Faculties/>
+        <Projects/>
         <Footer/>
       </div>
     </>

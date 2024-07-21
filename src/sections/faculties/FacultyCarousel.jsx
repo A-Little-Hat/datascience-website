@@ -3,10 +3,7 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  CardFooter
 } from '@/components/ui/card';
 import {
   Carousel,
@@ -22,7 +19,7 @@ const FacultyCarousel = () => {
       <CarouselContent className='-ml-1 w-full'>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index} className='pl-1 md:basis-1/2 lg:basis-1/4'>
-            <div className='p-1'>
+            <div className='p-1 grid place-items-center -ml-3 sm:-ml-0'>
               <Card className='w-[350px] h-fit pt-5 border-none shadow-none'>
                 <CardContent>
                   <div className='flex flex-col gap-3 items-center'>

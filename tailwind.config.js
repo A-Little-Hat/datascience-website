@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        'responsive': 'repeat(auto-fit, minmax(320px, 1fr))'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
