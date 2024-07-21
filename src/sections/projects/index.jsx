@@ -13,7 +13,7 @@ const Projects = () => {
           <Button size='lg' variant='outline' className='flex-1'>
             <p className='text-xl font-semibold'>NLP</p>
           </Button>
-          <Button variant='outline' className='flex-1'>
+          <Button size='lg' variant='outline' className='flex-1'>
             <p className='text-xl font-semibold'>Vision</p>
           </Button>
         </div>
