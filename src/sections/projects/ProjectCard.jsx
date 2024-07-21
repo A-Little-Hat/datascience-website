@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 const ProjectCard = () => {
   return (
     <>
-    <Card className='w-[300px] sm:w-[350px] h-fit p-0 overflow-hidden'>
+    <Card className='w-[295px] sm:w-[350px] h-fit p-0 overflow-hidden'>
               <CardContent className='p-0'>
                 <div className='flex flex-col gap-3 items-center'>
                   <img
