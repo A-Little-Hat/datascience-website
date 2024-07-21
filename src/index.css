@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: geist;
+    src: url('./assets/statics-woff/Geist-Regular.woff');
+  }
+
+.heading {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  
 }
