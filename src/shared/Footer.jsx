@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
     <div className='h-[5vh] flex items-center justify-center bg-slate-950 text-white'>
-        <p>Copyright &#xa9; {new Date().getFullYear()} | AKCSIT, University of Calcutta</p>
+        <p className='text-sm sm:text-base'>Copyright &#xa9; {new Date().getFullYear()} | AKCSIT, University of Calcutta</p>
     </div>
     </>
   )
