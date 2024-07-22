@@ -20,7 +20,7 @@ const FacultyCarousel = (data) => {
       <CarouselContent className="-ml-1 w-full">
         {data.data.map((item, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card className="md:h-[25rem] h-[20rem]">
+            <Card className="md:h-[25rem] h-[25rem]">
               <CardHeader className="w-full">
                 <img
                   className="w-36 h-36 rounded-[50%] object-cover object-center mx-auto"
