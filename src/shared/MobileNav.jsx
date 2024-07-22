@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Sheet,
   SheetContent,
@@ -6,28 +5,28 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
-import { FaBarsProgress } from 'react-icons/fa6';
-import NavMenus from './NavMenus';
+} from "@/components/ui/sheet";
+import { HiMenu } from "react-icons/hi";
+import NavMenus from "./NavMenus";
 const MobileNav = () => {
   return (
     <>
       <Sheet>
         <SheetTrigger>
-          <FaBarsProgress />
+          <HiMenu className="text-2xl" />
         </SheetTrigger>
-        <SheetContent className='flex flex-col items-baseline'>
-          <SheetTitle className='logo px-4 py-2'>
-            <a href={'/'} className='flex gap-2 items-center justify-start'>
+        <SheetContent className="flex flex-col items-baseline">
+          <SheetTitle className="logo px-2 pt-4">
+            <a href={"/"} className="flex gap-2 items-center justify-start">
               <img
-                className='w-8 h-8'
-                src='https://www.caluniv-ucsta.net/images/logo.png'
-                alt='Calcutta University Logo'
+                className="w-8 h-8"
+                src="https://www.caluniv-ucsta.net/images/logo.png"
+                alt="Calcutta University Logo"
               />
-              <h2 className='font-bold text-[1.2rem]'>University of Calcutta</h2>
+              <h2 className="font-bold text-base">University of Calcutta</h2>
             </a>
           </SheetTitle>
-          <NavMenus/>
+          <NavMenus />
         </SheetContent>
       </Sheet>
     </>

@@ -1,37 +1,59 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardFooter
-} from '@/components/ui/card';
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from "@/components/ui/carousel";
+import Modal from "@/sections/faculties/modal";
 
-const FacultyCarousel = () => {
+const FacultyCarousel = (data) => {
   return (
-    <Carousel className='w-full'>
-      <CarouselContent className='-ml-1 w-full'>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className='pl-1 md:basis-1/2 lg:basis-1/4'>
-            <div className='p-1 grid place-items-center -ml-3 sm:-ml-0'>
-              <Card className='w-[300px] sm:w-[350px] h-fit pt-5 border-none shadow-none'>
-                <CardContent>
-                  <div className='flex flex-col gap-3 items-center'>
-                    <img className='w-36 h-36 rounded-[50%] object-cover object-center' src='https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfDF8MHx8fDA%3D' alt='' />
-                    <p className='text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nostrum distinctio sint nihil officiis ipsa ullam recusandae maiores.</p>
-                  </div>
-                </CardContent>
-                <CardFooter className='flex justify-center w-full '>
+    <Carousel className="w-full">
+      <CarouselContent className="-ml-1 w-full">
+        {data.data.map((item, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <Card className="">
+              <CardHeader className="w-full">
+                <img
+                  className="w-36 h-36 rounded-[50%] object-cover object-center mx-auto"
+                  src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfDF8MHx8fDA%3D"
+                  alt=""
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-col gap-3 items-center">
+                  <p className="text-xl">
+                    <b>{item.name}</b>
+                  </p>
+                  <p className="text-justify overflow-ellipsis">
+                    {item.description.slice(0, 250)}
+                    {item.description.length > 249 && (
+                      <span>
+                        ...{" "}
+                        <Modal
+                          name={item.name}
+                          desc={item.description}
+                          image={
+                            "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfDF8MHx8fDA%3D"
+                          }
+                        />
+                      </span>
+                    )}
+                  </p>
+                </div>
+              </CardContent>
+              {/* <CardFooter className='flex justify-center w-full '>
                   <Button size='lg'>Deploy</Button>
-                </CardFooter>
-              </Card>
-            </div>
+                </CardFooter> */}
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>
