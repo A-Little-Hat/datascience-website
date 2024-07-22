@@ -20,7 +20,7 @@ const FacultyCarousel = (data) => {
       <CarouselContent className="-ml-1 w-full">
         {data.data.map((item, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card className="h-80 md:h-96">
+            <Card className="md:h-[25rem] h-[20rem]">
               <CardHeader className="w-full">
                 <img
                   className="w-36 h-36 rounded-[50%] object-cover object-center mx-auto"
@@ -34,8 +34,8 @@ const FacultyCarousel = (data) => {
                     <b>{item.name}</b>
                   </p>
                   <p className="text-justify overflow-ellipsis">
-                    {item.description.slice(0, 250)}
-                    {item.description.length > 249 && (
+                    {item.description.slice(0, 125)}
+                    {item.description.length > 124 && (
                       <span>
                         ...{" "}
                         <Modal
